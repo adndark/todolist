@@ -1,6 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import API, { graphqlOperation } from '@aws-amplify/api';
+import PubSub from '@aws-amplify/pubsub';
+import config from './aws-exports'
+
+// Configure Amplify
+API.configure(config)
+PubSub.configure(config)
 
 function App() {
   return (
@@ -8,7 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload - part 2.
         </p>
         <a
           className="App-link"
